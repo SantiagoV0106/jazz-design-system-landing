@@ -1,27 +1,25 @@
 export const navLinks = [
     {
-        id : crypto.randomUUID(),
-        name : 'Values'
+        id: 'values',
+        name: 'Values'
     },
     {
-        id : crypto.randomUUID(),
-        name : 'Our Team'
+        id: 'our-team',
+        name: 'Our Team'
     },
     {
-        id : crypto.randomUUID(),
-        name : 'Design System'
+        id: 'our-design-system',
+        name: 'Design System'
     },
     {
-        id : crypto.randomUUID(),
-        name : 'Benefits'
+        id: 'benefits',
+        name: 'Benefits'
     },
+
     {
-        id : crypto.randomUUID(),
-        name : 'Components'
-    },
-    {
-        id : crypto.randomUUID(),
-        name : 'Documentation'
-    },
+        id: "documentation",
+        name: "Documentation",
+        isExternal: true
+    }
 
 ]

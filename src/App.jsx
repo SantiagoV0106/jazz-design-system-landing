@@ -1,7 +1,10 @@
 import { useEffect, useState } from "react";
-import { Benefit, Footer, Header, Team, Value } from "./components"
+import { AppleIcon, Benefit, BlueApronLogo, Button, Footer, Header, Input, JazzALogo, MicIcon, Team, TrompetaIcon, Value, ViolinIcon } from "./components"
 import jazzByBlueApron from './assets/images/logos/Jazz-blue-apron.webp'
 import heroBg from './assets/images/bg/hero-bg.png';
+import compBg from './assets/images/bg/component-bg.png';
+import cardBg from './assets/images/bg/card-bg.jpg';
+import recipesCard from './assets/images/bg/recipes-card.jpg';
 import { benefits } from "./data/benfits";
 import { values } from "./data/values";
 import { ourTeam } from "./data/ourTeam";
@@ -20,6 +23,14 @@ function App() {
     };
   }, []);
 
+  const handleLinkClick = () => {
+    window.open(
+      "https://www.figma.com/design/R0euCPDfQnGlKY9JdyrK8o/Jazz-Design-System?node-id=2436-1434&t=5B36PkvSurRkZ9G9-1",
+      "_blank",
+      "noopener noreferrer"
+    );
+  }
+
   return (
     <>
       <Header />
@@ -34,7 +45,7 @@ function App() {
         }}
       >
         <div className="m-auto flex items-center gap-56 max-lg:gap-24 max-[960px]:flex-col">
-          <img className="max-sm:w-[200px]" src={jazzByBlueApron} alt="JazzByBlueApron" />
+          <img className="max-sm:w-[200px] cursor-pointer" src={jazzByBlueApron} alt="JazzByBlueApron" onClick={handleLinkClick} />
           <h2 className="text-white text-2xl flex flex-col max-sm:text-xl">
             Create in
             <span className="font-black text-8xl max-sm:text-7xl">
@@ -44,9 +55,9 @@ function App() {
         </div>
       </section>
 
-      <section className="my-28 mx-28 max-lg:mx-14">
+      <section className="my-36 mx-28 max-lg:mx-14" id="values">
         <h2 className="text-text-primary font-semibold text-4xl mb-16">Our Design Value</h2>
-        <div className="grid grid-cols-3 gap-7 max-lg:grid-cols-2 max-sm:grid-cols-1">
+        <div className="grid grid-cols-3 gap-7 max-lg:grid-cols-2 max-[680px]:grid-cols-1">
           {
             values.map(({ id, value, bgColor, desc, icon, name }, i) => {
               return (
@@ -57,7 +68,7 @@ function App() {
                   desc={desc}
                   icon={icon}
                   name={name}
-                  gridClass={i === 3 && isSmallScreen ? "row-span-2" : null}
+                  gridClass={i === 3 && isSmallScreen ? "row-span-2" : ''}
                 />
               )
             })
@@ -65,22 +76,118 @@ function App() {
         </div>
       </section>
 
-      <section className="my-28 mx-28 max-lg:mx-14">
+      <section className="mb-36 mx-28 max-lg:mx-14" id="our-team">
         <h2 className="text-text-primary font-semibold text-4xl mb-16">Our Team</h2>
         <div className="grid grid-cols-5 gap-4 items-end h-[460px] max-[1280px]:h-auto max-[1280px]:justify-items-center max-[1280px]:grid-cols-2 max-sm:grid-cols-1">
           {
             ourTeam.map(({ id, name, bgColor, img }, i) => {
               return (
-                <Team key={id} name={name} bgColor={bgColor} img={img} align={i % 2 !== 0 ? "self-start" : ""}/>
+                <Team key={id} name={name} bgColor={bgColor} img={img} align={i % 2 !== 0 ? "self-start" : ""} />
               )
             })
           }
         </div>
       </section>
 
-      <section className="bg-primary-orange mt-28">
+      <section className="mb-36 mx-28 max-lg:mx-14" id="our-design-system">
+        <h2 className="text-text-primary font-semibold text-4xl mb-16">Our Design System</h2>
+        <div className="grid grid-cols-5 max-[1280px]:grid-cols-4 max-[1280px]:grid-rows-3  max-[880px]:grid-cols-3 max-[880px]:grid-rows-5 grid-rows-2 gap-7">
+          <article className="bg-primary-blue col-span-2 max-[880px]:col-span-3 py-14 px-11 flex items-center rounded-3xl">
+            <div className="flex flex-col gap-7 w-full">
+              <div className="flex gap-4 max-sm:flex-col">
+                <Button type="primary">BUTTON</Button>
+                <Button type="secondary">BUTTON</Button>
+              </div>
+              <Button type="social" icon={<AppleIcon />}>BUTTON</Button>
+            </div>
+          </article>
+          <article className="bg-primary-yellow col-span-2 max-[880px]:col-span-3 rounded-3xl flex items-center justify-center">
+            <Input />
+          </article>
+          <article className="bg-primary-blue row-span-2 max-[880px]:col-span-3 max-[880px]:row-span-1 flex items-center justify-center rounded-3xl max-[1280px]:col-span-2">
+            <i><BlueApronLogo /></i>
+          </article>
+          <article className="bg-primary-orange col-span-2 max-[880px]:col-span-3 py-14 px-11 flex items-center justify-center rounded-3xl">
+            <img className="w-[260px]" src={recipesCard} alt="Recipies Card" />
+          </article>
+          <article className="bg-primary-pink col-span-2 max-[880px]:col-span-3 rounded-3xl"
+            style={{
+              backgroundImage: `url(${cardBg})`,
+              backgroundRepeat: 'no-repeat',
+              backgroundSize: 'cover',
+              backgroundPosition: 'center'
+            }}
+          >
+          </article>
+        </div>
+        {/* Refactorizable */}
+
+        <div className="grid grid-cols-[1fr_434px_1fr] max-[1280px]:grid-cols-2 max-[880px]:grid-cols-1 gap-7 mt-7">
+          <article className="bg-primary-yellow flex justify-center items-center py-16 rounded-3xl">
+            <JazzALogo />
+          </article>
+          <article className="bg-primary-orange py-16 flex justify-center items-center rounded-3xl">
+            <p className="flex flex-col items-center gap-3 text-white text-8xl font-extrabold">
+              42
+              <span className="text-4xl font-light">
+                Colors
+              </span>
+            </p>
+          </article>
+          <article className="bg-primary-pink h-full pt-16 flex flex-col justify-end items-center rounded-3xl">
+            <MicIcon />
+          </article>
+          <article className="bg-primary-orange flex justify-center items-center py-16 rounded-3xl">
+            <p className="flex flex-col items-center gap-3 text-white text-8xl font-extrabold">
+              10
+              <span className="text-4xl font-light">
+                Tokens
+              </span>
+            </p>
+          </article>
+          <article className={`bg-primary-blue py-16 flex justify-center items-center rounded-3xl max-[1280px]:row-span-2 `}
+            style={{
+              backgroundImage: `url(${compBg})`,
+              backgroundRepeat: 'no-repeat',
+              backgroundSize: 'cover',
+              backgroundPosition: 'center'
+            }}
+          >
+            <p className="flex flex-col items-center gap-3 text-white text-8xl font-extrabold">
+              29
+              <span className="text-4xl font-light">
+                Components
+              </span>
+            </p>
+          </article>
+          <article className="bg-primary-orange py-16 flex justify-center items-center rounded-3xl">
+            <p className="flex flex-col items-center gap-3 text-white text-8xl font-extrabold">
+              18
+              <span className="text-4xl font-light">
+                Font Styles
+              </span>
+            </p>
+          </article>
+          <article className="bg-primary-skyblue py-16 flex flex-col justify-end items-center rounded-3xl">
+            <ViolinIcon />
+          </article>
+          <article className="bg-primary-orange py-16 flex justify-center items-center rounded-3xl">
+            <p className="flex flex-col items-center gap-3 text-white text-8xl font-extrabold text-center">
+              94
+              <span className="text-4xl font-light">
+                Component Variants
+              </span>
+            </p>
+          </article>
+          <article className="bg-primary-yellow py-16 flex justify-center items-center rounded-3xl">
+            <TrompetaIcon />
+          </article>
+        </div>
+      </section>
+
+      <section className="bg-primary-orange" id="benefits">
         <h2 className="text-white font-semibold text-4xl py-16 px-28 max-lg:px-14">Benefits</h2>
-        <div className="grid grid-cols-3 gap-7 max-lg:grid-cols-2 max-sm:grid-cols-1 mx-28 pb-64 max-lg:mx-14">
+        <div className="grid grid-cols-3 gap-7 max-lg:grid-cols-2 max-[680px]:grid-cols-1 mx-28 pb-64 max-lg:mx-14">
           {
             benefits.map(({ id, icon, title, desc }) => {
               return (
