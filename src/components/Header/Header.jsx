@@ -22,7 +22,7 @@ export function Header() {
   const handleNavClick = (id, isExternal) => {
     if (isExternal) {
       window.open(
-        "https://www.figma.com/design/R0euCPDfQnGlKY9JdyrK8o/Jazz-Design-System?node-id=2436-1434&t=5B36PkvSurRkZ9G9-1",
+        "https://zeroheight.com/0c47887b5",
         "_blank",
         "noopener noreferrer"
       );

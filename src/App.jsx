@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { AppleIcon, Benefit, BlueApronLogo, Button, Footer, Header, Input, JazzALogo, MicIcon, Team, TrompetaIcon, Value, ViolinIcon } from "./components"
-import jazzByBlueApron from './assets/images/logos/Jazz-blue-apron.webp'
 import heroBg from './assets/images/bg/hero-bg.png';
 import compBg from './assets/images/bg/component-bg.png';
 import cardBg from './assets/images/bg/card-bg.jpg';
@@ -44,22 +43,22 @@ function App() {
           backgroundPosition: 'center'
         }}
       >
-        <div className="m-auto flex items-center gap-56 max-lg:gap-24 max-[960px]:flex-col">
+        <div className="m-auto flex items-center gap-56 max-lg:gap-24 max-[960px]:flex-col max-[960px]:gap-14">
           <BlueApronLogo props="max-sm:w-[200px] size-[250px] cursor-pointer" alt="JazzByBlueApron" onClick={handleLinkClick} />
-          <div className="flex flex-col gap-6">
+          <div className="flex flex-col gap-6 max-sm:px-4">
             <h2 className="text-white text-2xl flex flex-col max-sm:text-xl">
               Create in
               <span className="font-black text-8xl max-sm:text-7xl">
                 Harmony
               </span>
             </h2>
-            <p className="w-[500px] text-[15px] text-white"><strong>Jazz</strong> promises to deliver a unified,  and accessible design experience 
+            <p className="max-w-[500px] text-[15px] text-white"><strong>Jazz</strong> promises to deliver a unified,  and accessible design experience 
               that adapts to your needs. It provides the tools and framework 
               necessary for creating consistent, beautiful, and functional 
               interfaces while enabling creativity and innovation.</p>
-              <nav className="flex gap-6">
-                <a target="_blank" href="https://www.figma.com/design/R0euCPDfQnGlKY9JdyrK8o/Jazz-Design-System"><Button href="" type="primary" children="Preview in Figma" /></a>
-                <a target="_blank" href="https://zeroheight.com/0c47887b5"><Button type="secondary" children="Documentation" /></a>
+              <nav className="flex gap-6 max-sm:flex-col max-sm:justify-center">
+                <a target="_blank" href="https://www.figma.com/design/R0euCPDfQnGlKY9JdyrK8o/Jazz-Design-System"><Button href="" type="primary"> Preview in Figma </Button> </a>
+                <a target="_blank" href="https://zeroheight.com/0c47887b5"><Button type="secondary"> Documentation </Button> </a>
               </nav>
           </div>
         </div>
@@ -115,7 +114,7 @@ function App() {
             <Input />
           </article>
           <article className="bg-primary-blue row-span-2 max-[880px]:col-span-3 max-[880px]:row-span-1 flex items-center justify-center rounded-3xl max-[1280px]:col-span-2">
-            <i><BlueApronLogo /></i>
+            <i><BlueApronLogo props="max-sm:w-[100px] size-[150px] cursor-pointer" /></i>
           </article>
           <article className="bg-primary-orange col-span-2 max-[880px]:col-span-3 py-14 px-11 flex items-center justify-center rounded-3xl">
             <img className="w-[260px]" src={recipesCard} alt="Recipies Card" />

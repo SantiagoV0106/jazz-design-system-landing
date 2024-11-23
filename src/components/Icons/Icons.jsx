@@ -1,3 +1,5 @@
+/* eslint-disable react/prop-types */
+
 export function SaxoIcon() {
     return (
         <svg width="183" height="226" viewBox="0 0 183 226" fill="none" xmlns="http://www.w3.org/2000/svg">
