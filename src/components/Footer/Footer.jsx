@@ -4,7 +4,7 @@ export function Footer() {
     return (
         <footer className="bg-primary-blue flex flex-col h-[462px]">
             <i className="m-auto">
-                <BlueApronLogo />
+                <BlueApronLogo props="w-[120px]" />
             </i>
             <div className="flex justify-between mb-16 mx-[78px] max-md:flex-col max-md:gap-8">
                 <p className="font-light text-white cursor-default">

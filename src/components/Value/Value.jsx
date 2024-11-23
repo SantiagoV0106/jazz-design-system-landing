@@ -9,7 +9,7 @@ export function Value({
   gridClass
 }) {
   return (
-    <article className={`flex flex-col gap-8 ${bgColor} ${gridClass} ${bgColor === 'bg-primary-skyblue' ? 'text-text-secondary' : 'text-white'} ${icon ? 'p-0' : 'py-[50px] px-[44px]'} ${
+    <article className={`flex flex-col gap-8 ${bgColor} ${gridClass} ${bgColor === 'bg-primary-skyblue' ? 'text-text-secondary' : 'text-white'} ${icon ? 'p-0' : 'py-[50px] px-[44px] hover:scale-[1.02] transition-all'} ${
       name === 'saxo' ? 
       'justify-center' 
       : 

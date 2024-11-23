@@ -45,13 +45,23 @@ function App() {
         }}
       >
         <div className="m-auto flex items-center gap-56 max-lg:gap-24 max-[960px]:flex-col">
-          <img className="max-sm:w-[200px] cursor-pointer" src={jazzByBlueApron} alt="JazzByBlueApron" onClick={handleLinkClick} />
-          <h2 className="text-white text-2xl flex flex-col max-sm:text-xl">
-            Create in
-            <span className="font-black text-8xl max-sm:text-7xl">
-              Harmony
-            </span>
-          </h2>
+          <BlueApronLogo props="max-sm:w-[200px] size-[250px] cursor-pointer" alt="JazzByBlueApron" onClick={handleLinkClick} />
+          <div className="flex flex-col gap-6">
+            <h2 className="text-white text-2xl flex flex-col max-sm:text-xl">
+              Create in
+              <span className="font-black text-8xl max-sm:text-7xl">
+                Harmony
+              </span>
+            </h2>
+            <p className="w-[500px] text-[15px] text-white"><strong>Jazz</strong> promises to deliver a unified,  and accessible design experience 
+              that adapts to your needs. It provides the tools and framework 
+              necessary for creating consistent, beautiful, and functional 
+              interfaces while enabling creativity and innovation.</p>
+              <nav className="flex gap-6">
+                <a target="_blank" href="https://www.figma.com/design/R0euCPDfQnGlKY9JdyrK8o/Jazz-Design-System"><Button href="" type="primary" children="Preview in Figma" /></a>
+                <a target="_blank" href="https://zeroheight.com/0c47887b5"><Button type="secondary" children="Documentation" /></a>
+              </nav>
+          </div>
         </div>
       </section>
 

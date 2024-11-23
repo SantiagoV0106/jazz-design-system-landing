@@ -93,7 +93,7 @@ export function Header() {
           <ul className="flex flex-col lg:flex-row lg:gap-8 text-center gap-9">
             {navLinks.map(({ id, name, isExternal }) => (
               <li
-                className="text-white text-2xl lg:text-base cursor-pointer hover:text-gray-400"
+                className="text-white text-2xl lg:text-base cursor-pointer hover:scale-110 transition-all"
                 key={id}
                 onClick={() => handleNavClick(id, isExternal)}
               >
