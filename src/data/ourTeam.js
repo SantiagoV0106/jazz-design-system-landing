@@ -25,7 +25,7 @@ export const ourTeam = [
     },
     {
         id : crypto.randomUUID(),
-        name : 'Santiago Velsco',
+        name : 'Santiago Velasco',
         bgColor : 'bg-primary-orange',
         img : santi
     },
