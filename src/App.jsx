@@ -233,7 +233,7 @@ function App() {
                 <h2 className=" text-4xl font-bold text-white font-cerapro -ml-24 -mb-8">Cera Pro</h2>
               </span>
               <span className="flex justify-end w-[100%]">
-                <a target="_blank" href="https://zeroheight.com/0c47887b5"><Button props="bg-white text-primary-blue"> Download font </Button> </a>
+                <a target="_blank" href="https://drive.google.com/file/d/1PO2rIp7HsE_u4eG6Jjsio8hkv2fNM5nD/view?usp=sharing"><Button props="bg-white text-primary-blue"> Download font </Button> </a>
               </span>
               
             </article>
@@ -244,7 +244,7 @@ function App() {
                 <h2 className=" text-4xl font-bold text-white font-chronicle -ml-24 -mb-8">Chronicle Display</h2>
               </span>
               <span className="flex justify-end w-[100%]">
-                <a target="_blank" href="https://zeroheight.com/0c47887b5"><Button props="bg-white text-primary-blue"> Download font </Button> </a>
+                <a target="_blank" href="https://drive.google.com/file/d/1AJ1BOfDP2BYE08aFEZjoFAJhwecyIYhX/view?usp=sharing"><Button props="bg-white text-primary-blue"> Download font </Button> </a>
               </span>
               
             </article>
@@ -253,7 +253,7 @@ function App() {
               <h2 className=" text-5xl py-24 font-bold text-primary-darkblue -ml-24 -mb-8">UI Inventory Blueprint</h2>
               
               <span className="flex justify-end w-[100%]">
-                <a target="_blank" href="https://zeroheight.com/0c47887b5"><Button props="bg-white text-primary-blue"> Download Source </Button> </a>
+                <a target="_blank" href="https://drive.google.com/file/d/109fBHSMV5nTKj82vqXgLWmyIX6nq_HRr/view?usp=sharing"><Button props="bg-white text-primary-blue"> Download Source </Button> </a>
               </span>
               <div className="relative w-[100%] h-[100%]">
                 <img src={mockup2} className="absolute -top-[224px]" alt="" />
