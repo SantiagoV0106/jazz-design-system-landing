@@ -11,6 +11,8 @@ import loginScreen from './assets/images/bg/login-screen.png';
 import recipesCard from './assets/images/bg/recipes-card.jpg';
 import mockup from './assets/images/bg/mockup.png';
 import token from './assets/images/bg/token.png';
+import mockup2 from './assets/images/bg/mockup2.png';
+import uiIcons from './assets/images/bg/ui-inventory-icons.png';
 import { benefits } from "./data/benfits";
 import { values } from "./data/values";
 import { ourTeam } from "./data/ourTeam";
@@ -246,8 +248,18 @@ function App() {
               </span>
               
             </article>
-            <article className="bg-primary-mediumblue col-span-2 rounded-3xl">
-              <h1 className="text-white text-8xl font-extrabold">UI Inventory Blueprint</h1>
+            <article className="bg-primary-mediumblue rounded-3xl flex col-span-2 flex-col items-center py-6 px-6">
+              <div></div>
+              <h2 className=" text-5xl py-24 font-bold text-primary-darkblue -ml-24 -mb-8">UI Inventory Blueprint</h2>
+              
+              <span className="flex justify-end w-[100%]">
+                <a target="_blank" href="https://zeroheight.com/0c47887b5"><Button props="bg-white text-primary-blue"> Download Source </Button> </a>
+              </span>
+              <div className="relative w-[100%] h-[100%]">
+                <img src={mockup2} className="absolute -top-[224px]" alt="" />
+                <img src={uiIcons} className="absolute -top-[290px] right-0" alt="" />
+              </div>
+              
             </article>
         </div>
       </section>
@@ -256,13 +268,14 @@ function App() {
         <h2 className="text-white font-semibold text-4xl py-16 px-28 max-lg:px-14">Benefits</h2>
         <div className="grid grid-cols-3 gap-7 max-lg:grid-cols-2 max-[680px]:grid-cols-1 mx-28 pb-64 max-lg:mx-14">
           {
-            benefits.map(({ id, icon, title, desc }) => {
+            benefits.map(({ id, icon, title, desc, type }) => {
               return (
                 <Benefit
                   key={id}
                   icon={icon}
                   title={title}
-                  desc={desc} />
+                  desc={desc}
+                  type={type} />
               )
             })
           }
