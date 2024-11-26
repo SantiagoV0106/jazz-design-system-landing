@@ -1,58 +1,59 @@
-import { JazzALogo, PianoIcon, SaxoIcon, ViolinIcon } from "../components";
+import { JazzALogo } from "../components";
+import valueBg from '../assets/images/bg/value-bg.png'
+import valueImage from '../assets/images/bg/value-food.png'
+import valueMockup from '../assets/images/bg/value-mockup.png'
 
 export const values = [
     {
         id: crypto.randomUUID(),
-        value: 'Visual and Brand Consistency',
+        value: 'Transparency',
         bgColor: 'bg-primary-orange',
-        desc: 'We ensure that all your products reflect your brand identity with cohesive and eye-catching designs across platforms.'
+        desc: 'Components should be clear, reducing cognitive load and providing an effortless experience for users.'
     },
     {
         id: crypto.randomUUID(),
-        icon: <SaxoIcon />,
-        bgColor: 'bg-primary-yellow',
-        name: 'saxo',
+        bgImage: valueBg,
     },
     {
         id: crypto.randomUUID(),
         value: 'Flexibility',
-        bgColor: 'bg-primary-skyblue',
+        bgColor: 'bg-primary-darkblue',
         desc: 'Encourage adaptability in components, offering options for customization without sacrificing the integrity of the design language.'
     },
     {
         id: crypto.randomUUID(),
         icon: <JazzALogo />,
-        bgColor: 'bg-primary-pink',
+        bgColor: 'bg-primary-lightblue',
         name: 'jazzA',
     },
     {
         id: crypto.randomUUID(),
         value: 'Harmony',
-        bgColor: 'bg-primary-blue',
+        bgColor: 'bg-primary-mediumblue',
         desc: 'All components should work together seamlessly, much like instruments in a jazz ensemble. Design and development must feel fluid, without interruptions in the user journey.'
     },
     {
         id: crypto.randomUUID(),
-        icon: <PianoIcon />,
+        image : valueImage,
         bgColor: 'bg-primary-orange',
-        name: 'piano',
+        name: 'Value-food-image',
     },
     {
         id: crypto.randomUUID(),
         value: 'Accesibility',
-        bgColor: 'bg-primary-yellow',
+        bgColor: 'bg-primary-darkblue',
         desc: 'Prioritize intuitive interactions, ensuring designs are inclusive, responsive, and easy to use for all users.'
     },
     {
         id: crypto.randomUUID(),
-        icon: <ViolinIcon />,
-        bgColor: 'bg-primary-orange',
-        name: 'violin',
+        image : valueMockup,
+        bgColor: 'bg-primary-blue',
+        name: 'value-mockup',
     },
     {
         id: crypto.randomUUID(),
         value: 'Serenity',
-        bgColor: 'bg-primary-pink',
+        bgColor: 'bg-primary-mediumblue',
         desc: 'Visual elements should evoke calmness. Use soft color palettes, rounded edges, and ample whitespace to create a relaxed, inviting experience.'
     },
 ]

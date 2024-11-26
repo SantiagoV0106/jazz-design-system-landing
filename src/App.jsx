@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { AppleIcon, Benefit, BlueApronLogo, Button, Footer, Header, Input, JazzALogo, MicIcon, Team, TrompetaIcon, Value, ViolinIcon } from "./components"
+import jazzLogo from './assets/images/logos/jazz-blue-apron.webp';
 import heroBg from './assets/images/bg/hero-bg.png';
+import heroMokup from './assets/images/bg/hero-mockup.webp';
 import compBg from './assets/images/bg/component-bg.png';
 import cardBg from './assets/images/bg/card-bg.jpg';
 import recipesCard from './assets/images/bg/recipes-card.jpg';
@@ -22,14 +24,6 @@ function App() {
     };
   }, []);
 
-  const handleLinkClick = () => {
-    window.open(
-      "https://www.figma.com/design/R0euCPDfQnGlKY9JdyrK8o/Jazz-Design-System?node-id=2436-1434&t=5B36PkvSurRkZ9G9-1",
-      "_blank",
-      "noopener noreferrer"
-    );
-  }
-
   return (
     <>
       <Header />
@@ -43,8 +37,11 @@ function App() {
           backgroundPosition: 'center'
         }}
       >
-        <div className="m-auto flex items-center gap-56 max-lg:gap-24 max-[960px]:flex-col max-[960px]:gap-14">
-          <BlueApronLogo props="max-sm:w-[200px] size-[250px] cursor-pointer" alt="JazzByBlueApron" onClick={handleLinkClick} />
+        <div className="mt-auto mx-auto flex gap-32 max-lg:gap-24 max-[960px]:flex-col max-[960px]:gap-14 max-lg:mb-auto max-lg:items-center ">
+          <div className="flex flex-col gap-24">
+            <img className="w-[368px] max-[1140px]:w-[298px]" src={jazzLogo} alt="JazzByBlueApron" />
+            <img className="max-lg:hidden max-[1140px]:w-[348px]" src={heroMokup} alt="Blue apron hero mockup" />
+          </div>
           <div className="flex flex-col gap-6 max-sm:px-4">
             <h2 className="text-white text-2xl flex flex-col max-sm:text-xl">
               Create in
@@ -52,23 +49,35 @@ function App() {
                 Harmony
               </span>
             </h2>
-            <p className="max-w-[500px] text-[15px] text-white"><strong>Jazz</strong> promises to deliver a unified,  and accessible design experience 
-              that adapts to your needs. It provides the tools and framework 
-              necessary for creating consistent, beautiful, and functional 
-              interfaces while enabling creativity and innovation.</p>
-              <nav className="flex gap-6 max-sm:flex-col max-sm:justify-center">
-                <a target="_blank" href="https://www.figma.com/design/R0euCPDfQnGlKY9JdyrK8o/Jazz-Design-System"><Button href="" type="primary"> Preview in Figma </Button> </a>
-                <a target="_blank" href="https://zeroheight.com/0c47887b5"><Button type="secondary"> Documentation </Button> </a>
-              </nav>
+            <p className="max-w-[500px] text-[15px] text-white">
+              <strong>Jazz </strong>
+              is a comprehensive design system meticulously crafted to
+              streamline the design and development processes at Blue Apron.
+              Inspired by the improvisational nature of jazz music,
+              our system fosters a collaborative and efficient
+              environment where designers and developers can work in harmony.
+            </p>
+            <nav className="flex gap-6 max-sm:flex-col max-sm:justify-center">
+              <a target="_blank" href="https://www.figma.com/design/R0euCPDfQnGlKY9JdyrK8o/Jazz-Design-System"><Button href="" type="primary"> Preview in Figma </Button> </a>
+              <a target="_blank" href="https://zeroheight.com/0c47887b5"><Button type="secondary"> Documentation </Button> </a>
+            </nav>
           </div>
         </div>
       </section>
 
       <section className="my-36 mx-28 max-lg:mx-14" id="values">
-        <h2 className="text-text-primary font-semibold text-4xl mb-16">Our Design Value</h2>
+        <h2 className="text-text-primary font-semibold text-4xl mb-16">Our Design Values</h2>
         <div className="grid grid-cols-3 gap-7 max-lg:grid-cols-2 max-[680px]:grid-cols-1">
           {
-            values.map(({ id, value, bgColor, desc, icon, name }, i) => {
+            values.map(({
+              id,
+              value,
+              bgColor,
+              desc,
+              icon,
+              name,
+              bgImage,
+              image }, i) => {
               return (
                 <Value
                   key={id}
@@ -77,6 +86,8 @@ function App() {
                   desc={desc}
                   icon={icon}
                   name={name}
+                  bgImage={bgImage}
+                  image={image}
                   gridClass={i === 3 && isSmallScreen ? "row-span-2" : ''}
                 />
               )
@@ -87,11 +98,11 @@ function App() {
 
       <section className="mb-36 mx-28 max-lg:mx-14" id="our-team">
         <h2 className="text-text-primary font-semibold text-4xl mb-16">Our Team</h2>
-        <div className="grid grid-cols-5 gap-4 items-end h-[460px] max-[1280px]:h-auto max-[1280px]:justify-items-center max-[1280px]:grid-cols-2 max-sm:grid-cols-1">
+        <div className="grid grid-cols-2 gap-8 ">
           {
-            ourTeam.map(({ id, name, bgColor, img }, i) => {
+            ourTeam.map(({ id, name, bgColor, img }) => {
               return (
-                <Team key={id} name={name} bgColor={bgColor} img={img} align={i % 2 !== 0 ? "self-start" : ""} />
+                <Team key={id} name={name} bgColor={bgColor} img={img} />
               )
             })
           }
@@ -217,3 +228,6 @@ function App() {
 }
 
 export default App
+
+
+// items-end h-[460px] max-[1280px]:h-auto max-[1280px]:justify-items-center max-[1280px]:grid-cols-2 max-sm:grid-cols-1
