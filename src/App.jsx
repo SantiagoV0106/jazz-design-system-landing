@@ -98,11 +98,18 @@ function App() {
 
       <section className="mb-36 mx-28 max-lg:mx-14" id="our-team">
         <h2 className="text-text-primary font-semibold text-4xl mb-16">Our Team</h2>
-        <div className="grid grid-cols-2 gap-8 ">
+        <div className="grid grid-cols-3 gap-7 max-2xl:grid-cols-2 max-lg:grid-cols-1 ">
           {
-            ourTeam.map(({ id, name, bgColor, img }) => {
+            ourTeam.map(({ id, name, bgColor, img, tags, links }) => {
               return (
-                <Team key={id} name={name} bgColor={bgColor} img={img} />
+                <Team
+                  key={id}
+                  name={name}
+                  bgColor={bgColor}
+                  img={img}
+                  tags={tags} 
+                  links={links}
+                  />
               )
             })
           }

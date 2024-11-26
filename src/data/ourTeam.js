@@ -22,12 +22,12 @@ export const ourTeam = [
         ],
         links: [
             {
-                id: 'likedin',
-                link: ''
+                id: 'linkedin',
+                link: 'https://www.linkedin.com/in/rossy-hurtado/'
             },
             {
                 id: 'behance',
-                link: ''
+                link: 'https://www.behance.net/rossyhurtado1'
             },
         ]
     },
@@ -48,12 +48,12 @@ export const ourTeam = [
         ],
         links: [
             {
-                id: 'likedin',
-                link: ''
+                id: 'linkedin',
+                link: 'https://www.linkedin.com/in/valeria-martinez-betancourt/'
             },
             {
                 id: 'behance',
-                link: ''
+                link: 'https://www.behance.net/valeriamartinez11'
             },
         ]
     },
@@ -74,12 +74,12 @@ export const ourTeam = [
         ],
         links: [
             {
-                id: 'likedin',
-                link: ''
+                id: 'linkedin',
+                link: 'https://www.linkedin.com/in/laura-forero21/'
             },
             {
                 id: 'behance',
-                link: ''
+                link: 'https://www.behance.net/lauraforero12'
             },
         ]
     },
@@ -100,12 +100,12 @@ export const ourTeam = [
         ],
         links: [
             {
-                id: 'likedin',
-                link: ''
+                id: 'linkedin',
+                link: 'https://www.linkedin.com/in/santiago-velasco-carrillo/'
             },
             {
                 id: 'behance',
-                link: ''
+                link: 'https://www.behance.net/santiagovelasco'
             },
         ]
     },
@@ -126,12 +126,12 @@ export const ourTeam = [
         ],
         links: [
             {
-                id: 'likedin',
-                link: ''
+                id: 'linkedin',
+                link: 'https://www.linkedin.com/in/cristian-ortiz-melendez/'
             },
             {
                 id: 'behance',
-                link: ''
+                link: 'https://www.behance.net/cristianortiz6'
             },
         ]
     },
