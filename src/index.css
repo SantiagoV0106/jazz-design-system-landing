@@ -2,3 +2,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@font-face {
+    font-family: 'Cera Pro';
+    src: url('/src/assets/fonts/CeraPro-Bold.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Chronicle Display';
+    src: url('/src/assets/fonts/CeraPro-Chronicle Display Black.otf') format('otf');
+    font-weight: normal;
+    font-style: normal;
+}

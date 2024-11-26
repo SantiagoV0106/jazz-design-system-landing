@@ -7,7 +7,9 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['"DM Sans"', 'sans-serif']
+        cerapro: ['Cera Pro', 'sans-serif'],
+        sans: ['"DM Sans"', 'sans-serif'],
+        chronicle: ['Chronicle Display', 'sans-serif']
       },
       colors: {
         primary: {
