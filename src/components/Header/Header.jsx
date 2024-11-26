@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import logo from "../../assets/images/logos/Jazz-logo.webp";
+import logo from "../../assets/images/logos/Jazz-full-logo.webp";
 import { navLinks } from "../../data/navlinks";
 
 export function Header() {
@@ -39,6 +39,10 @@ export function Header() {
     setMenuOpen(false); // Cierra el menú hamburguesa
   };
 
+  const handleLogoClick = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <header className="fixed top-0 left-0 w-full z-50">
       {/* Fondo dinámico */}
@@ -49,8 +53,8 @@ export function Header() {
 
       <div className="relative flex w-full justify-between items-center py-4 px-28 max-lg:px-14">
         {/* Logo */}
-        <div>
-          <img className="w-[30px]" src={logo} alt="Jazz" />
+        <div onClick={handleLogoClick} className="cursor-pointer">
+          <img className="w-[80px]" src={logo} alt="Jazz" />
         </div>
 
         {/* Botón Hamburguesa */}
