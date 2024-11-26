@@ -5,31 +5,41 @@ export const benefits = [
         id: crypto.randomUUID(),
         icon: <VisualIcon />,
         title: 'Visual and Brand Consistency',
-        desc: 'We ensure that all your products reflect your brand identity with cohesive and eye-catching designs across platforms.'
+        desc: 'Jazz ensures a cohesive and recognizable brand identity across platforms, delivering visually appealing and uniform designs.',
+        type: 'normal'
     },
     {
         id: crypto.randomUUID(),
         icon: <AcceleratedIcon />,
         title: 'Accelerated Development',
-        desc: 'Our Design Systems standardize components and patterns, reducing development time and speeding up the delivery of digital products.'
+        desc: 'By standardizing components and patterns, Jazz reduces development time, enabling faster delivery of high-quality digital products.',
+        type: 'normal'
     },
     {
         id: crypto.randomUUID(),
         icon: <IntegrationIcon />,
         title: 'Seamless Integration',
-        desc: 'Our Design Systems standardize components and patterns, reducing development time and speeding up the delivery of digital products.'
+        desc: 'Jazz promotes smooth collaboration between design and development teams, simplifying workflows and ensuring compatibility across tools and platforms.',
+        type: 'normal'
     },
     {
         id: crypto.randomUUID(),
         icon: <EnhancedIcon />,
         title: 'Enhanced User Experience',
-        desc: 'We ensure that all your products reflect your brand identity with cohesive and eye-catching designs across platforms.'
+        desc: 'Jazz prioritizes intuitive and accessible design, creating interfaces that are user-friendly and meet diverse accessibility standards.',
+        type: 'normal'
     },
     {
         id: crypto.randomUUID(),
         icon: <ScalableIcon />,
         title: 'Scalable by Design',
-        desc: 'With a solid Design System, your brand will be ready to grow and adapt to new challenges effortlessly.'
+        desc: 'With a solid framework, Jazz empowers your brand to adapt and grow seamlessly, supporting future challenges and innovations.',
+        type: 'normal'
+    },
+    {
+        id: crypto.randomUUID(),
+        title: 'Customize it to fit other brands or product UI Styles',
+        type: 'last'
     },
 
 ]
