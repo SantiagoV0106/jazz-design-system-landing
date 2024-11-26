@@ -288,6 +288,3 @@ function App() {
 }
 
 export default App
-
-
-// items-end h-[460px] max-[1280px]:h-auto max-[1280px]:justify-items-center max-[1280px]:grid-cols-2 max-sm:grid-cols-1
