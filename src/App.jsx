@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { AppleIcon, Benefit, BlueApronLogo, Button, Footer, Header, Input, JazzALogo, RecipeIcon, MicIcon, Team, TrompetaIcon, Value, ViolinIcon } from "./components"
+import { AppleIcon, Benefit, BlueApronLogo, Button, Footer, Header, Input, RecipeIcon, Team, Value, } from "./components"
 import jazzLogo from './assets/images/logos/jazz-blue-apron.webp';
 import heroBg from './assets/images/bg/hero-bg.png';
 import heroMokup from './assets/images/bg/hero-mockup.webp';
