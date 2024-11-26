@@ -11,9 +11,11 @@ export default {
       },
       colors: {
         primary: {
-          "blue": "#3939FF",
-          "yellow": "#F2BB05",
-          "orange": "#FF5B22",
+          "blue": "#003ACA",
+          "darkblue": "#001E6A",
+          "mediumblue": "#1BC2FF",
+          "lightblue": "#96E6FF",
+          "orange": "#FF712A",
           "pink": "#DBBBFF",
           "skyblue": "#AEE6ED",
           "grey" : "#E3E3E5"
